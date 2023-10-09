@@ -200,7 +200,9 @@ res.status(400).send(errMessge);
 
 app.post('/logout',async(req,res)=>{
 
-    res.clearCookie('token');
+    res.clearCookie('token',{ secure: true, // set to true if your using https or samesite is none
+    httpOnly: true, // backend only
+    sameSite: 'none'});
 
     return res.json({message:"logout sucesss"})
 
