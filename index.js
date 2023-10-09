@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(cookie_parser())
 app.use(cors({
     origin: [ 
-        'http://localhost:3000' 
+        'http://localhost:3000','https://assignment-frontend-blue.vercel.app' 
       ], 
       methods: ['GET', 'PUT', 'POST','DELETE','PATCH'], 
       allowedHeaders: ['Content-Type', 'Authorization', 'x-csrf-token'], 
